@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Card Viewer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-Hello World
+    <div class="container">
+        <h1>EMRS BHAINSDEHI</h1>
+        <h2>STUDENT DIRECTORY</h2>
+
+        <div class="filters">
+            <div class="filter-group">
+                <div class="filter-item">
+                    <label for="houseFilter">House</label>
+                    <select id="houseFilter">
+                        <option value="">All Houses</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="genderFilter">Gender</label>
+                    <select id="genderFilter">
+                        <option value="">All Genders</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label for="classFilter">Class</label>
+                    <select id="classFilter">
+                        <option value="">All Classes</option>
+                    </select>
+                </div>
+            </div>
+            <button class="clear-filters" onclick="clearFilters()">Clear All Filters</button>
+            <div class="results-info" id="resultsInfo"></div>
+        </div>
+
+        <div class="cards-container" id="cardsContainer"></div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">Developed by <strong>BHUPENDRA PRATAP</strong> (PGT CS, EMRS Bhainsdehi)</p>
+            <p class="footer-links">
+                <a href="mailto:bhupendrapratap999@gmail.com">Email</a> • 
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a> • 
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </p>
+            <p class="footer-copyright">© 2026 All rights reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
