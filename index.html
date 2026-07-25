@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMRS Bhainsdehi Student Directory</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMRS Bhainsdehi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
-        <h1>EMRS BHAINSDEHI</h1>
-        <h2>STUDENT DIRECTORY</h2>
 
-        <div class="filters">
-            <div class="filter-group">
-                <div class="filter-item">
-                    <label for="houseFilter">House</label>
-                    <select id="houseFilter">
-                        <option value="">All Houses</option>
-                    </select>
-                </div>
-                <div class="filter-item">
-                    <label for="genderFilter">Gender</label>
-                    <select id="genderFilter">
-                        <option value="">All Genders</option>
-                    </select>
-                </div>
-                <div class="filter-item">
-                    <label for="classFilter">Class</label>
-                    <select id="classFilter">
-                        <option value="">All Classes</option>
-                    </select>
-                </div>
-            </div>
-            <button class="clear-filters" onclick="clearFilters()">Clear All Filters</button>
-            <div class="results-info" id="resultsInfo"></div>
-        </div>
+<header class="top">
+  <div class="eyebrow">Eklavya Model Residential School</div>
+  <div class="crest">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#f6f2e9" stroke-width="1.7">
+      <path d="M12 3 2 8l10 5 10-5-10-5z"/>
+      <path d="M6 10.5v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/>
+    </svg>
+  </div>
+  <h1>EMRS <span>Bhainsdehi</span></h1>
+  <div class="sub">A single home for the school's everyday tools — find any student in seconds, or look up who's teaching where, right now.</div>
+</header>
 
-        <div class="cards-container" id="cardsContainer"></div>
-    </div>
+<main>
+  <div class="grid">
+    <a class="card" href="pages/student-directory/student-directory.html">
+      <div class="card-icon i-people">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="9" cy="8" r="3.2"/>
+          <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+          <circle cx="17" cy="8" r="2.6"/>
+          <path d="M15.5 14.2c2.6.4 4.5 2.7 4.5 5.8"/>
+        </svg>
+      </div>
+      <div>
+        <div class="card-label">Directory</div>
+        <div class="card-title">Student Directory</div>
+      </div>
+      <div class="card-desc">Browse every student by house, gender and class, with filters to narrow down the full roll in a click.</div>
+      <div class="card-cta">Open directory
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </div>
+    </a>
 
+    <a class="card" href="pages/timetable/timetable.html">
+      <div class="card-icon i-clock">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="12" cy="12" r="8.5"/>
+          <path d="M12 7.5V12l3 2"/>
+        </svg>
+      </div>
+      <div>
+        <div class="card-label">Session 2026–27</div>
+        <div class="card-title">Timetable Explorer</div>
+      </div>
+      <div class="card-desc">Look up every teacher, class and period from the master schedule in one searchable view.</div>
+      <div class="card-cta">Open timetable
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </div>
+    </a>
+  </div>
+</main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="footer-text">Developed by <strong>BHUPENDRA PRATAP</strong> (PGT CS, EMRS Bhainsdehi)</p>
-            <p class="footer-links">
-                <a href="mailto:bhupendrapratap999@gmail.com">Email</a> • 
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a> • 
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            </p>
-            <p class="footer-copyright">© 2026 All rights reserved</p>
-        </div>
-    </footer>
+<footer>
+  Developed by BHUPENDRA PRATAP (PGT CS, EMRS Bhainsdehi) · <a href="mailto:bhupendrapratap999@gmail.com">Email</a>
+</footer>
 
-
-    <script src="script.js"></script>
 </body>
 </html>
