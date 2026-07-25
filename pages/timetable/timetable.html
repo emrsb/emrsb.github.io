@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMRS Bhainsdehi — Timetable Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="headline-row">
+    <div>
+      <a href="../../index.html" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--indigo-2);text-decoration:none;font-weight:600;">&larr; Home</a>
+      <div class="eyebrow">Eklavya Model Residential School</div>
+      <h1>Bhainsdehi — Timetable Explorer</h1>
+      <div class="sub">Session 2026–27 · Every teacher, class and period from the master schedule, in one browsable view.</div>
+    </div>
+    <div class="clock-card">
+      <div class="cc-label">Right now</div>
+      <div class="cc-value" id="liveClock">—</div>
+    </div>
+  </div>
+
+  <div class="arrow-divider">
+    <svg width="26" height="14" viewBox="0 0 26 14" fill="none">
+      <line x1="0" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M20 1L26 7L20 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="track"></div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button data-view="teacher" class="active">Teacher View</button>
+  <button data-view="classv">Class View</button>
+  <button data-view="master">Master Grid</button>
+  <button data-view="staff">Staff Directory</button>
+</nav>
+
+<main>
+  <div class="panel">
+
+    <!-- TEACHER VIEW -->
+    <section class="view active" id="view-teacher">
+      <div class="controls">
+        <div class="select-wrap">
+          <label for="teacherSelect">Select teacher</label>
+          <select id="teacherSelect"></select>
+        </div>
+        <span class="meta-pill" id="teacherMeta"></span>
+      </div>
+      <div style="overflow:auto;">
+        <table class="tt-table" id="teacherTable"></table>
+      </div>
+    </section>
+
+    <!-- CLASS VIEW -->
+    <section class="view" id="view-classv">
+      <div class="controls">
+        <div class="select-wrap">
+          <label for="classSelect">Select class</label>
+          <select id="classSelect"></select>
+        </div>
+        <span class="meta-pill" id="classMeta"></span>
+      </div>
+      <div style="overflow:auto;">
+        <table class="tt-table" id="classTable"></table>
+      </div>
+    </section>
+
+    <!-- MASTER GRID -->
+    <section class="view" id="view-master">
+      <div class="controls">
+        <div class="select-wrap">
+          <label for="masterSearch">Filter teachers</label>
+          <input type="search" id="masterSearch" placeholder="Type a name…">
+        </div>
+        <span class="meta-pill">Scroll to explore · first column &amp; header stay pinned</span>
+      </div>
+      <div class="master-scroll">
+        <table class="master" id="masterTable"></table>
+      </div>
+    </section>
+
+    <!-- STAFF DIRECTORY -->
+    <section class="view" id="view-staff">
+      <div class="controls">
+        <div class="select-wrap">
+          <label for="staffSearch">Search staff</label>
+          <input type="search" id="staffSearch" placeholder="Name, designation or subject…">
+        </div>
+        <span class="meta-pill" id="staffMeta"></span>
+      </div>
+      <div class="staff-grid" id="staffGrid"></div>
+    </section>
+
+  </div>
+</main>
+
+<footer>EMRS Bhainsdehi · Timetable data converted from the school's master workbook</footer>
+
+<script src="timetable.js"></script>
+</body>
+</html>
